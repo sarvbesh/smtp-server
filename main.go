@@ -68,8 +68,6 @@ func sendEmailHandler(wr http.ResponseWriter, rd *http.Request) {
 
 	msg := formatEmailMessage(request.Recipients, request.Subject, request.Message)
 
-	// send email
-
 	maxRetries := 3
 	retryCount := 0
 	backoff := 1 * time.Second
